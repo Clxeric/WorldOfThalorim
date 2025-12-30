@@ -1,0 +1,63 @@
+[
+  {
+    "dependsOn": [
+      {
+        "modid": "skeletons"
+      }
+    ],
+    "file": "skeletons:config/customplayermodels/possessed.json",
+    "op": "replace",
+    "path": "/possessed/ExtraTraits/0",
+    "value": "undead-ability"
+  },
+  {
+    "dependsOn": [
+      {
+        "modid": "skeletons"
+      }
+    ],
+    "file": "skeletons:config/customplayermodels/possessed.json",
+    "op": "remove",
+    "path": "/possessed/ExtraTraits/5"
+  },
+  {
+    "dependsOn": [
+      {
+        "modid": "skeletons"
+      }
+    ],
+    "file": "skeletons:config/customplayermodels/possessed.json",
+    "op": "remove",
+    "path": "/possessed/ExtraTraits/4"
+  },
+  {
+    "dependsOn": [
+      {
+        "modid": "skeletons"
+      }
+    ],
+    "file": "skeletons:config/customplayermodels/possessed.json",
+    "op": "remove",
+    "path": "/possessed/ExtraTraits/3"
+  },
+  {
+    "dependsOn": [
+      {
+        "modid": "skeletons"
+      }
+    ],
+    "file": "skeletons:config/customplayermodels/possessed.json",
+    "op": "remove",
+    "path": "/possessed/ExtraTraits/2"
+  },
+  {
+    "dependsOn": [
+      {
+        "modid": "skeletons"
+      }
+    ],
+    "file": "skeletons:config/customplayermodels/possessed.json",
+    "op": "remove",
+    "path": "/possessed/ExtraTraits/1"
+  }
+]

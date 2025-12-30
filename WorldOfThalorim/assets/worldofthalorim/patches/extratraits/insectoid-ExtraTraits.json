@@ -1,0 +1,15 @@
+[
+  {
+    "dependsOn": [
+      {
+        "modid": "vintageskavenrat"
+      }
+    ],
+    "file": "vintageskavenrat:config/customplayermodels/insectoid.json",
+    "op": "addmerge",
+    "path": "/insectoid/ExtraTraits",
+    "value": [
+      "insectoid-ability"
+    ]
+  }
+]

@@ -1,0 +1,63 @@
+[
+  {
+    "dependsOn": [
+      {
+        "modid": "skeletons"
+      }
+    ],
+    "file": "skeletons:config/customplayermodels/skeleton.json",
+    "op": "replace",
+    "path": "/skeleton/ExtraTraits/0",
+    "value": "undead-ability"
+  },
+  {
+    "dependsOn": [
+      {
+        "modid": "skeletons"
+      }
+    ],
+    "file": "skeletons:config/customplayermodels/skeleton.json",
+    "op": "remove",
+    "path": "/skeleton/ExtraTraits/5"
+  },
+  {
+    "dependsOn": [
+      {
+        "modid": "skeletons"
+      }
+    ],
+    "file": "skeletons:config/customplayermodels/skeleton.json",
+    "op": "remove",
+    "path": "/skeleton/ExtraTraits/4"
+  },
+  {
+    "dependsOn": [
+      {
+        "modid": "skeletons"
+      }
+    ],
+    "file": "skeletons:config/customplayermodels/skeleton.json",
+    "op": "remove",
+    "path": "/skeleton/ExtraTraits/3"
+  },
+  {
+    "dependsOn": [
+      {
+        "modid": "skeletons"
+      }
+    ],
+    "file": "skeletons:config/customplayermodels/skeleton.json",
+    "op": "remove",
+    "path": "/skeleton/ExtraTraits/2"
+  },
+  {
+    "dependsOn": [
+      {
+        "modid": "skeletons"
+      }
+    ],
+    "file": "skeletons:config/customplayermodels/skeleton.json",
+    "op": "remove",
+    "path": "/skeleton/ExtraTraits/1"
+  }
+]

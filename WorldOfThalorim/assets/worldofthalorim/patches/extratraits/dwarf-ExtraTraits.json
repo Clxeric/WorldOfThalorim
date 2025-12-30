@@ -1,0 +1,15 @@
+[
+  {
+    "dependsOn": [
+      {
+        "modid": "racialequality"
+      }
+    ],
+    "file": "racialequality:config/customplayermodels/dwarf-char.json",
+    "op": "addmerge",
+    "path": "/dwarf/ExtraTraits",
+    "value": [
+      "dwarven-ability"
+    ]
+  }
+]

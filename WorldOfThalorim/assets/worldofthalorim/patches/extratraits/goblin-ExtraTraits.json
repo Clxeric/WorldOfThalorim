@@ -1,0 +1,15 @@
+[
+  {
+    "dependsOn": [
+      {
+        "modid": "racialequality"
+      }
+    ],
+    "file": "racialequality:config/customplayermodels/goblin-char.json",
+    "op": "addmerge",
+    "path": "/goblin/ExtraTraits",
+    "value": [
+      "goblin-ability"
+    ]
+  }
+]

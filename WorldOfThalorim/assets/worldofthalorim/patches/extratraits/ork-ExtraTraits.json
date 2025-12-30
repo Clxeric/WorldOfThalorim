@@ -1,0 +1,15 @@
+[
+  {
+    "dependsOn": [
+      {
+        "modid": "racialequality"
+      }
+    ],
+    "file": "racialequality:config/customplayermodels/ork-char.json",
+    "op": "addmerge",
+    "path": "/ork/ExtraTraits",
+    "value": [
+      "ork-ability"
+    ]
+  }
+]

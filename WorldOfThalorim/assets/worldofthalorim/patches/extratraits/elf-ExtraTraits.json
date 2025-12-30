@@ -1,0 +1,15 @@
+[
+  {
+    "dependsOn": [
+      {
+        "modid": "racialequality"
+      }
+    ],
+    "file": "racialequality:config/customplayermodels/elf-char.json",
+    "op": "addmerge",
+    "path": "/elf/ExtraTraits",
+    "value": [
+      "elven-ability"
+    ]
+  }
+]

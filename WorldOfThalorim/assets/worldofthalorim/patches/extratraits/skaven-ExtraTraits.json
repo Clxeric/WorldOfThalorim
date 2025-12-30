@@ -1,0 +1,15 @@
+[
+  {
+    "dependsOn": [
+      {
+        "modid": "vintageskavenrat"
+      }
+    ],
+    "file": "vintageskavenrat:config/customplayermodels/skaven-char.json",
+    "op": "addmerge",
+    "path": "/skaven/ExtraTraits",
+    "value": [
+      "ratfolk-ability"
+    ]
+  }
+]

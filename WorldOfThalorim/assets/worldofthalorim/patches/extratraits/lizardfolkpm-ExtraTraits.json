@@ -1,0 +1,15 @@
+[
+  {
+    "dependsOn": [
+      {
+        "modid": "lizardfolkpm"
+      }
+    ],
+    "file": "lizardfolkpm:config/customplayermodels/lizardfolkpm.json",
+    "op": "addmerge",
+    "path": "/lizardfolkpm/ExtraTraits",
+    "value": [
+      "lizardfolk-ability"
+    ]
+  }
+]
