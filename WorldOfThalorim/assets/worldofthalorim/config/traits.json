@@ -81,7 +81,10 @@
     "type": "positive",
     "attributes": {
       "walkspeed": 0.10,
+      //temporal
+      "enlightenmentbonus": 0,
       "temporalStabilityDropRate": -0.40, //нужно пересмотреть
+      //
       "meleeWeaponsDamage": -0.10,
       "maxhealthExtraPoints": -2,
       //CANNOT use bandages
