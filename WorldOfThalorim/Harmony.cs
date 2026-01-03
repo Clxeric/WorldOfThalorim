@@ -34,23 +34,7 @@ namespace WorldOfThalorim
 
                 if (tagArray.ContainsAll(SkeletonArray))
                 {
-                    ItemStack lastitemstack = null;
-
-                    IPlayer iplay = player.Player;
-                    ItemSlot activeSlot = iplay.InventoryManager.ActiveHotbarSlot;
-                    ItemStack itemstack = activeSlot.Itemstack;
-
-                    if (itemstack == null && lastitemstack != null)
-                    {
-                        itemstack = lastitemstack;
-                    }
-                    if (itemstack == null) { return false; }
-                    lastitemstack = itemstack;
-
-                    CollectibleObject collectible = itemstack.Collectible;
-
-                    string itemName = collectible.GetHeldItemName(activeSlot.Itemstack);
-                    if (itemName.ToLower().Contains("potion") || itemName.ToLower().Contains("potionflask"))
+                    if (damageSource.DamageOverTimeType == 9999)
                     {
                         return true;
                     }
@@ -61,7 +45,7 @@ namespace WorldOfThalorim
                 }
 
             }
-            return false;
+            return true;
         }
     }
 
@@ -85,6 +69,83 @@ namespace WorldOfThalorim
                 float newValue = currentValue + bonus;
                 coolingProp.SetValue(__instance, newValue);
             }
+        }
+    }
+
+    [HarmonyPatch("Alchemy.TempEffect", "ApplyHealth")]
+    public static class HarmonyTempEffect
+    {
+        [HarmonyPrefix]
+        public static bool Prefix_ApplyHealth(object __instance, EntityPlayer entity) //Этот код является дуркой, но подругому я не умею... выглядит ужастно, он заменяет уже сущестующих код но в 3 раза больше и всё это для того чтоб добавить одну строчку кода
+        {
+            Type type = __instance.GetType();
+
+            FieldInfo contextField = type.GetField("Context",
+                    BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance);
+
+            if (contextField == null)
+            {
+                Debug.WriteLine("[WorldOfThalorim] Context == null");
+                return true; // Пропускаем в оригинальный метод
+            }
+            object contextObj = contextField.GetValue(__instance);
+            Type contextType = contextObj.GetType();
+            PropertyInfo healthProp = contextType.GetProperty("Health",
+                BindingFlags.Public | BindingFlags.Instance);
+
+            if (healthProp == null)
+            {
+                Debug.WriteLine("[WorldOfThalorim] healthProp == null");
+                return true; // Пропускаем в оригинальный метод
+            }
+
+            float health = (float)healthProp.GetValue(contextObj);
+
+            if (Math.Abs(health) <= float.Epsilon)
+            {
+                //return true; мб я всё сломал...
+            }
+            float wearableHealEffect = 0f; //Это тут было до меня
+
+            PropertyInfo ignoreArmourProp = contextType.GetProperty("IgnoreArmour",
+                BindingFlags.Public | BindingFlags.Instance);
+
+            if (ignoreArmourProp == null)
+            {
+                Debug.WriteLine("[WorldOfThalorim] ignoreArmourProp == null");
+                return true; // Пропускаем в оригинальный метод
+            }
+
+            bool ignoreArmour = (bool)ignoreArmourProp.GetValue(contextObj);
+
+            if (ignoreArmour)
+            {
+                ITreeAttribute statsTree = entity.WatchedAttributes
+                   .GetTreeAttribute("stats")
+                    ?.GetTreeAttribute("healingeffectivness");
+
+                if (statsTree != null)
+                    wearableHealEffect = statsTree.GetFloat("wearablemod");
+
+                if (Math.Abs(wearableHealEffect) > float.Epsilon)
+                    entity.Stats.Set("healingeffectivness", "wearablemod", 0f, false);
+            }
+
+            var damageSource = new DamageSource
+            {
+                Source = EnumDamageSource.Internal,
+                Type = health > 0 ? EnumDamageType.Heal : EnumDamageType.Poison,
+
+                DamageOverTimeType = 9999 //попытка
+            };
+
+            entity.ReceiveDamage(damageSource, Math.Abs(health));
+
+            if (Math.Abs(wearableHealEffect) > float.Epsilon)
+                entity.Stats.Set("healingeffectivness", "wearablemod", wearableHealEffect, false);
+
+            Debug.WriteLine("Член");
+            return false;
         }
     }
 }
