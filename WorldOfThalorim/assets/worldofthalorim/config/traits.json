@@ -58,7 +58,8 @@
       "swimSpeed": 0.50,
       "walkspeed": -0.05,
       //cold//
-      "warmthBonus": -5, //нужно смотреть, нужно менять
+      "warmthBonus": -5,
+      "coolingBonus": 10, //selfwritten attribute, gives a static bonus to clothing bonus numbers
       //hunger//
       "hungerrate": 0.10,
       "proteinNutritionFactor": 0.2,
