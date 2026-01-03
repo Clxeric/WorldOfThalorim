@@ -19,7 +19,11 @@
     "op": "addmerge",
     "path": "/infected/ExtraTraits",
     "value": [
-      "undead-ability"
+      "spiritual_void",
+      "unnatural_stamina",
+      "no_digestion",
+      "brittle_body",
+      "no_organic_healing"
     ]
   }
 ]

@@ -9,7 +9,11 @@
     "op": "addmerge",
     "path": "/lizardfolkpm/ExtraTraits",
     "value": [
-      "lizardfolk-ability"
+      "aquatic_adaptation",
+      "scaly_skin",
+      "carnivorous_digestion",
+      "cold_blooded",
+      "slow_metabolism"
     ]
   }
 ]

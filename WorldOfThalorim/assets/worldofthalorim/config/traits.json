@@ -108,5 +108,243 @@
       "rangedWeaponsDamage": -0.15,
       "hungerrate": 0.05
     }
+  },
+  {
+    "code": "experienced_miner",
+    "type": "positive",
+    "attributes": {
+      "miningSpeedMul": 0.10,
+      "oreDropRate": 0.25
+    }
+  },
+  {
+    "code": "short_legs",
+    "type": "negative",
+    "attributes": {
+      "walkspeed": -0.1
+    }
+  },
+  {
+    "code": "high_metabolism",
+    "type": "negative",
+    "attributes": {
+      "hungerrate": 0.05
+    }
+  },
+  {
+    "code": "light_boned",
+    "type": "positive",
+    "attributes": {
+      "walkspeed": 0.05
+    }
+  },
+  {
+    "code": "excellent_marksman",
+    "type": "positive",
+    "attributes": {
+      "rangedWeaponsAcc": 0.25,
+      "bowsProficiency": 0.10,
+      "crossbowsProficiency": 0.10,
+      "firearmsProficiency": 0.10,
+      "slingsProficiency": 0.10
+    }
+  },
+  {
+    "code": "allergic_to_medicine",
+    "type": "negative",
+    "attributes": {
+      "healingeffectivness": -0.50
+    }
+  },
+  {
+    "code": "muscular_build",
+    "type": "positive",
+    "attributes": {
+      "meleeWeaponsDamage": 0.15
+    }
+  },
+  {
+    "code": "robust_constitution",
+    "type": "positive",
+    "attributes": {
+      "maxhealthExtraPoints": 3
+    }
+  },
+  {
+    "code": "heavy_frame",
+    "type": "negative",
+    "attributes": {
+      "walkspeed": -0.05
+    }
+  },
+  {
+    "code": "fast_digestion",
+    "type": "negative",
+    "attributes": {
+      "hungerrate": 0.10
+    }
+  },
+  {
+    "code": "agile_body",
+    "type": "positive",
+    "attributes": {
+      "walkspeed": 0.05
+    }
+  },
+  {
+    "code": "quick_hands",
+    "type": "positive",
+    "attributes": {
+      "bowsProficiency": 0.15,
+      "crossbowsProficiency": 0.15,
+      "firearmsProficiency": 0.15,
+      "slingsProficiency": 0.15
+    }
+  },
+  {
+    "code": "opportunistic_aim",
+    "type": "positive",
+    "attributes": {
+      "rangedWeaponsDamage": 0.05
+    }
+  },
+  {
+    "code": "fragile_physique",
+    "type": "negative",
+    "attributes": {
+      "maxhealthExtraPoints": -3
+    }
+  },
+  {
+    "code": "aquatic_adaptation",
+    "type": "positive",
+    "attributes": {
+      "swimSpeed": 0.50
+    }
+  },
+  {
+    "code": "scaly_skin",
+    "type": "positive",
+    "attributes": {
+      "maxhealthExtraPoints": 3,
+      "meleeWeaponsDamage": 0.05
+    }
+  },
+  {
+    "code": "carnivorous_digestion",
+    "type": "positive",
+    "attributes": {
+      "proteinNutritionFactor": 0.2,
+      "vegetableNutritionFactor": -0.2,
+      "grainNutritionFactor": -0.2
+    }
+  },
+  {
+    "code": "cold_blooded",
+    "type": "negative",
+    "attributes": {
+      "warmthBonus": -5,
+      "coolingBonus": 10
+    }
+  },
+  {
+    "code": "slow_metabolism",
+    "type": "negative",
+    "attributes": {
+      "walkspeed": -0.05,
+      "hungerrate": 0.10
+    }
+  },
+  {
+    "code": "quick_sprint",
+    "type": "positive",
+    "attributes": {
+      "walkspeed": 0.15
+    }
+  },
+  {
+    "code": "weak_arms",
+    "type": "negative",
+    "attributes": {
+      "meleeWeaponsDamage": -0.15,
+      "rangedWeaponsDamage": -0.10
+    }
+  },
+  {
+    "code": "thin_body",
+    "type": "negative",
+    "attributes": {
+      "maxhealthExtraPoints": -1
+    }
+  },
+  {
+    "code": "spiritual_void",
+    "type": "positive",
+    "attributes": {
+      "temporalStabilityDropRate": -0.40,
+      "enlightenmentbonus": 0
+    }
+  },
+  {
+    "code": "unnatural_stamina",
+    "type": "positive",
+    "attributes": {
+      "walkspeed": 0.10
+    }
+  },
+  {
+    "code": "no_digestion",
+    "type": "positive",
+    "attributes": {
+      "hungerrate": -0.50
+    }
+  },
+  {
+    "code": "brittle_body",
+    "type": "negative",
+    "attributes": {
+      "meleeWeaponsDamage": -0.10,
+      "maxhealthExtraPoints": -2
+    }
+  },
+  {
+    "code": "no_organic_healing", //it's necessary to tell the players that he's special.
+    "type": "negative",
+    "attributes": {
+      "no_organic_healing": 0
+    }
+  },
+  {
+    "code": "chitin_armor",
+    "type": "positive",
+    "attributes": {
+      "maxhealthExtraPoints": 10
+    }
+  },
+  {
+    "code": "poor_hand_eye",
+    "type": "negative",
+    "attributes": {
+      "steadyAim": -0.5,
+      "rangedWeaponsDamage": -0.15
+    }
+  },
+  {
+    "code": "awkward_limbs",
+    "type": "negative",
+    "attributes": {
+      "walkspeed": -0.05,
+      "bowsProficiency": -0.25,
+      "crossbowsProficiency": -0.25,
+      "firearmsProficiency": -0.25,
+      "slingsProficiency": -0.25
+    }
+  },
+  {
+    "code": "fast_metabolism",
+    "type": "negative",
+    "attributes": {
+      "hungerrate": 0.05
+    }
   }
 ]

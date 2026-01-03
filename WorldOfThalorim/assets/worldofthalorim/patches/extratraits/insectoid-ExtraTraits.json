@@ -9,7 +9,10 @@
     "op": "addmerge",
     "path": "/insectoid/ExtraTraits",
     "value": [
-      "insectoid-ability"
+      "chitin_armor",
+      "poor_hand_eye",
+      "awkward_limbs",
+      "fast_metabolism"
     ]
   }
 ]

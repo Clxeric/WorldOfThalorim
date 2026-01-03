@@ -9,7 +9,10 @@
     "op": "addmerge",
     "path": "/goblin/ExtraTraits",
     "value": [
-      "goblin-ability"
+      "agile_body",
+      "quick_hands",
+      "opportunistic_aim",
+      "fragile_physique"
     ]
   }
 ]

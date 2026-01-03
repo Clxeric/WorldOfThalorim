@@ -9,7 +9,9 @@
     "op": "addmerge",
     "path": "/dwarf/ExtraTraits",
     "value": [
-      "dwarven-ability"
+      "experienced_miner",
+      "short_legs",
+      "high_metabolism"
     ]
   }
 ]

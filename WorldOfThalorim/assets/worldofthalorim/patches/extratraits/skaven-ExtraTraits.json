@@ -9,7 +9,9 @@
     "op": "addmerge",
     "path": "/skaven/ExtraTraits",
     "value": [
-      "ratfolk-ability"
+      "quick_sprint",
+      "weak_arms",
+      "thin_body"
     ]
   }
 ]

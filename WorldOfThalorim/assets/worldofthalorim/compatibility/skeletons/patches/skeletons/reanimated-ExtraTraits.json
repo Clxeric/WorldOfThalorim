@@ -6,9 +6,8 @@
       }
     ],
     "file": "skeletons:config/customplayermodels/reanimated.json",
-    "op": "replace",
-    "path": "/reanimated/ExtraTraits/0",
-    "value": "undead-ability"
+    "op": "remove",
+    "path": "/reanimated/ExtraTraits"
   },
   {
     "dependsOn": [
@@ -17,47 +16,14 @@
       }
     ],
     "file": "skeletons:config/customplayermodels/reanimated.json",
-    "op": "remove",
-    "path": "/reanimated/ExtraTraits/5"
-  },
-  {
-    "dependsOn": [
-      {
-        "modid": "skeletons"
-      }
-    ],
-    "file": "skeletons:config/customplayermodels/reanimated.json",
-    "op": "remove",
-    "path": "/reanimated/ExtraTraits/4"
-  },
-  {
-    "dependsOn": [
-      {
-        "modid": "skeletons"
-      }
-    ],
-    "file": "skeletons:config/customplayermodels/reanimated.json",
-    "op": "remove",
-    "path": "/reanimated/ExtraTraits/3"
-  },
-  {
-    "dependsOn": [
-      {
-        "modid": "skeletons"
-      }
-    ],
-    "file": "skeletons:config/customplayermodels/reanimated.json",
-    "op": "remove",
-    "path": "/reanimated/ExtraTraits/2"
-  },
-  {
-    "dependsOn": [
-      {
-        "modid": "skeletons"
-      }
-    ],
-    "file": "skeletons:config/customplayermodels/reanimated.json",
-    "op": "remove",
-    "path": "/reanimated/ExtraTraits/1"
+    "op": "addmerge",
+    "path": "/reanimated/ExtraTraits",
+    "value": [
+      "spiritual_void",
+      "unnatural_stamina",
+      "no_digestion",
+      "brittle_body",
+      "no_organic_healing"
+    ]
   }
 ]

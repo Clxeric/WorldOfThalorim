@@ -9,7 +9,10 @@
     "op": "addmerge",
     "path": "/ork/ExtraTraits",
     "value": [
-      "ork-ability"
+      "muscular_build",
+      "robust_constitution",
+      "heavy_frame",
+      "fast_digestion"
     ]
   }
 ]

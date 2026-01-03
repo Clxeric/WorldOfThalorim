@@ -6,9 +6,8 @@
       }
     ],
     "file": "skeletons:config/customplayermodels/possessed.json",
-    "op": "replace",
-    "path": "/possessed/ExtraTraits/0",
-    "value": "undead-ability"
+    "op": "remove",
+    "path": "/possessed/ExtraTraits"
   },
   {
     "dependsOn": [
@@ -17,47 +16,14 @@
       }
     ],
     "file": "skeletons:config/customplayermodels/possessed.json",
-    "op": "remove",
-    "path": "/possessed/ExtraTraits/5"
-  },
-  {
-    "dependsOn": [
-      {
-        "modid": "skeletons"
-      }
-    ],
-    "file": "skeletons:config/customplayermodels/possessed.json",
-    "op": "remove",
-    "path": "/possessed/ExtraTraits/4"
-  },
-  {
-    "dependsOn": [
-      {
-        "modid": "skeletons"
-      }
-    ],
-    "file": "skeletons:config/customplayermodels/possessed.json",
-    "op": "remove",
-    "path": "/possessed/ExtraTraits/3"
-  },
-  {
-    "dependsOn": [
-      {
-        "modid": "skeletons"
-      }
-    ],
-    "file": "skeletons:config/customplayermodels/possessed.json",
-    "op": "remove",
-    "path": "/possessed/ExtraTraits/2"
-  },
-  {
-    "dependsOn": [
-      {
-        "modid": "skeletons"
-      }
-    ],
-    "file": "skeletons:config/customplayermodels/possessed.json",
-    "op": "remove",
-    "path": "/possessed/ExtraTraits/1"
+    "op": "addmerge",
+    "path": "/possessed/ExtraTraits",
+    "value": [
+      "spiritual_void",
+      "unnatural_stamina",
+      "no_digestion",
+      "brittle_body",
+      "no_organic_healing"
+    ]
   }
 ]

@@ -9,7 +9,9 @@
     "op": "addmerge",
     "path": "/elf/ExtraTraits",
     "value": [
-      "elven-ability"
+      "light_boned",
+      "excellent_marksman",
+      "allergic_to_medicine"
     ]
   }
 ]
