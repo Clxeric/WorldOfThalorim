@@ -72,27 +72,19 @@ namespace WorldOfThalorim
         public static void Postfix_UpdateCoolingFactor(object __instance)
         {
             Type type = __instance.GetType();
-            FieldInfo entityField = typeof(EntityBehavior)
+            FieldInfo entityProp = typeof(EntityBehavior)
                 .GetField("entity", BindingFlags.Public | BindingFlags.Instance);
-
-            PropertyInfo entityProp = type.GetProperty("entity", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic);
             PropertyInfo coolingProp = type.GetProperty("Cooling");
 
-            if (coolingProp != null && entityField != null)
+            if (coolingProp != null && entityProp != null)
             {
-                Entity entity = entityField.GetValue(__instance) as Entity;
+                Entity entity = entityProp.GetValue(__instance) as Entity;
                 EntityAgent entityAgent = entity as EntityAgent;
                 float currentValue = (float)coolingProp.GetValue(__instance);
                 float bonus = entityAgent.Stats.GetBlended("coolingBonus");
                 float newValue = currentValue + bonus;
                 coolingProp.SetValue(__instance, newValue);
-
-                //Debug.WriteLine($"[WorldOfThalorim] тест: {currentValue}    -    {newValue}   -   {bonus}");
             }
-            //else
-            //{
-            //    Debug.WriteLine($"[WorldOfThalorim] ошибка null");
-            //}
         }
     }
 }
