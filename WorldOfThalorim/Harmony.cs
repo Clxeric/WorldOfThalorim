@@ -83,21 +83,10 @@ namespace WorldOfThalorim
             FieldInfo contextField = type.GetField("Context",
                     BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance);
 
-            if (contextField == null)
-            {
-                Debug.WriteLine("[WorldOfThalorim] Context == null");
-                return true; // Пропускаем в оригинальный метод
-            }
             object contextObj = contextField.GetValue(__instance);
             Type contextType = contextObj.GetType();
             PropertyInfo healthProp = contextType.GetProperty("Health",
                 BindingFlags.Public | BindingFlags.Instance);
-
-            if (healthProp == null)
-            {
-                Debug.WriteLine("[WorldOfThalorim] healthProp == null");
-                return true; // Пропускаем в оригинальный метод
-            }
 
             float health = (float)healthProp.GetValue(contextObj);
 
@@ -109,12 +98,6 @@ namespace WorldOfThalorim
 
             PropertyInfo ignoreArmourProp = contextType.GetProperty("IgnoreArmour",
                 BindingFlags.Public | BindingFlags.Instance);
-
-            if (ignoreArmourProp == null)
-            {
-                Debug.WriteLine("[WorldOfThalorim] ignoreArmourProp == null");
-                return true; // Пропускаем в оригинальный метод
-            }
 
             bool ignoreArmour = (bool)ignoreArmourProp.GetValue(contextObj);
 
@@ -144,7 +127,6 @@ namespace WorldOfThalorim
             if (Math.Abs(wearableHealEffect) > float.Epsilon)
                 entity.Stats.Set("healingeffectivness", "wearablemod", wearableHealEffect, false);
 
-            Debug.WriteLine("Член");
             return false;
         }
     }
