@@ -1,0 +1,37 @@
+[
+  {
+    "dependsOn": [{ "modid": "rustboundmagic"}],
+    "file": "rustboundmagic:itemtypes/wearable/armorarm.json",
+    "op": "replace",
+    "path": "/attributesByType/*/magicStatModifiersByType/*-elementalresonance/maxmana",
+    "value": 100
+  },
+  {
+    "dependsOn": [{ "modid": "rustboundmagic"}],
+    "file": "rustboundmagic:itemtypes/wearable/armorarm.json",
+    "op": "replace",
+    "path": "/attributesByType/*/magicStatModifiersByType/*-travelerssoul/maxmana",
+    "value": 100
+  },
+  {
+    "dependsOn": [{ "modid": "rustboundmagic"}],
+    "file": "rustboundmagic:itemtypes/wearable/armorarm.json",
+    "op": "replace",
+    "path": "/attributesByType/*/magicStatModifiersByType/*-markofeternity/maxmana",
+    "value": 100
+  },
+  {
+    "dependsOn": [{ "modid": "rustboundmagic"}],
+    "file": "rustboundmagic:itemtypes/wearable/armorarm.json",
+    "op": "replace",
+    "path": "/attributesByType/*/magicStatModifiersByType/*-heartofharmony/maxmana",
+    "value": 100
+  },
+  {
+    "dependsOn": [{ "modid": "rustboundmagic"}],
+    "file": "rustboundmagic:itemtypes/wearable/armorarm.json",
+    "op": "replace",
+    "path": "/attributesByType/*/magicStatModifiersByType/*-codexofdestruction/maxmana",
+    "value": 100
+  }
+]

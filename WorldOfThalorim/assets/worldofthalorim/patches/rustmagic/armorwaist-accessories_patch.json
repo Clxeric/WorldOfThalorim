@@ -1,0 +1,170 @@
+[
+  {
+    "dependsOn": [{ "modid": "rustboundmagic"}],
+    "file": "rustboundmagic:itemtypes/wearable/accessories/armorwaist-accessories.json",
+    "op": "replace",
+    "path": "/attributesByType/*/magicStatModifiersByType/*-tier1-*-maxmana/maxmana",
+    "value": 50
+  },
+  {
+    "dependsOn": [{ "modid": "rustboundmagic"}],
+    "file": "rustboundmagic:itemtypes/wearable/accessories/armorwaist-accessories.json",
+    "op": "replace",
+    "path": "/attributesByType/*/magicStatModifiersByType/*-tier1-*-manaregen/manaregen",
+    "value": 2
+  },
+  {
+    "dependsOn": [{ "modid": "rustboundmagic"}],
+    "file": "rustboundmagic:itemtypes/wearable/accessories/armorwaist-accessories.json",
+    "op": "replace",
+    "path": "/attributesByType/*/magicStatModifiersByType/*-tier1-*-manacost/genericmodifiermanacost",
+    "value": -0.04
+  },
+  {
+    "dependsOn": [{ "modid": "rustboundmagic"}],
+    "file": "rustboundmagic:itemtypes/wearable/accessories/armorwaist-accessories.json",
+    "op": "replace",
+    "path": "/attributesByType/*/magicStatModifiersByType/*-tier1-*-casttime/genericmodifiercasttime",
+    "value": -0.04
+  },
+  {
+    "dependsOn": [{ "modid": "rustboundmagic"}],
+    "file": "rustboundmagic:itemtypes/wearable/accessories/armorwaist-accessories.json",
+    "op": "replace",
+    "path": "/attributesByType/*/magicStatModifiersByType/*-tier1-*-duration/genericmodifierduration",
+    "value": 0.22
+  },
+  {
+    "dependsOn": [{ "modid": "rustboundmagic"}],
+    "file": "rustboundmagic:itemtypes/wearable/accessories/armorwaist-accessories.json",
+    "op": "replace",
+    "path": "/attributesByType/*/magicStatModifiersByType/*-tier1-*-damage/genericmodifierdamage",
+    "value": 0.04
+  },
+  {
+    "dependsOn": [{ "modid": "rustboundmagic"}],
+    "file": "rustboundmagic:itemtypes/wearable/accessories/armorwaist-accessories.json",
+    "op": "replace",
+    "path": "/attributesByType/*/magicStatModifiersByType/*-tier1-*-stats/genericmodifierstats",
+    "value": 0.04
+  },
+  {
+    "dependsOn": [{ "modid": "rustboundmagic"}],
+    "file": "rustboundmagic:itemtypes/wearable/accessories/armorwaist-accessories.json",
+    "op": "replace",
+    "path": "/attributesByType/*/magicStatModifiersByType/*-tier1-*-runspeed/walkspeedmodifier",
+    "value": 0.10
+  },
+  {
+    "dependsOn": [{ "modid": "rustboundmagic"}],
+    "file": "rustboundmagic:itemtypes/wearable/accessories/armorwaist-accessories.json",
+    "op": "replace",
+    "path": "/attributesByType/*/magicStatModifiersByType/*-tier2-*-maxmana/maxmana",
+    "value": 100
+  },
+  {
+    "dependsOn": [{ "modid": "rustboundmagic"}],
+    "file": "rustboundmagic:itemtypes/wearable/accessories/armorwaist-accessories.json",
+    "op": "replace",
+    "path": "/attributesByType/*/magicStatModifiersByType/*-tier2-*-manaregen/manaregen",
+    "value": 4
+  },
+  {
+    "dependsOn": [{ "modid": "rustboundmagic"}],
+    "file": "rustboundmagic:itemtypes/wearable/accessories/armorwaist-accessories.json",
+    "op": "replace",
+    "path": "/attributesByType/*/magicStatModifiersByType/*-tier2-*-manacost/genericmodifiermanacost",
+    "value": -0.10
+  },
+  {
+    "dependsOn": [{ "modid": "rustboundmagic"}],
+    "file": "rustboundmagic:itemtypes/wearable/accessories/armorwaist-accessories.json",
+    "op": "replace",
+    "path": "/attributesByType/*/magicStatModifiersByType/*-tier2-*-casttime/genericmodifiercasttime",
+    "value": -0.10
+  },
+  {
+    "dependsOn": [{ "modid": "rustboundmagic"}],
+    "file": "rustboundmagic:itemtypes/wearable/accessories/armorwaist-accessories.json",
+    "op": "replace",
+    "path": "/attributesByType/*/magicStatModifiersByType/*-tier2-*-duration/genericmodifierduration",
+    "value": 0.44
+  },
+  {
+    "dependsOn": [{ "modid": "rustboundmagic"}],
+    "file": "rustboundmagic:itemtypes/wearable/accessories/armorwaist-accessories.json",
+    "op": "replace",
+    "path": "/attributesByType/*/magicStatModifiersByType/*-tier2-*-damage/genericmodifierdamage",
+    "value": 0.10
+  },
+  {
+    "dependsOn": [{ "modid": "rustboundmagic"}],
+    "file": "rustboundmagic:itemtypes/wearable/accessories/armorwaist-accessories.json",
+    "op": "replace",
+    "path": "/attributesByType/*/magicStatModifiersByType/*-tier2-*-stats/genericmodifierstats",
+    "value": 0.10
+  },
+  {
+    "dependsOn": [{ "modid": "rustboundmagic"}],
+    "file": "rustboundmagic:itemtypes/wearable/accessories/armorwaist-accessories.json",
+    "op": "replace",
+    "path": "/attributesByType/*/magicStatModifiersByType/*-tier2-*-runspeed/walkspeedmodifier",
+    "value": 0.20
+  },
+  {
+    "dependsOn": [{ "modid": "rustboundmagic"}],
+    "file": "rustboundmagic:itemtypes/wearable/accessories/armorwaist-accessories.json",
+    "op": "replace",
+    "path": "/attributesByType/*/magicStatModifiersByType/*-tier3-*-maxmana/maxmana",
+    "value": 150
+  },
+  {
+    "dependsOn": [{ "modid": "rustboundmagic"}],
+    "file": "rustboundmagic:itemtypes/wearable/accessories/armorwaist-accessories.json",
+    "op": "replace",
+    "path": "/attributesByType/*/magicStatModifiersByType/*-tier3-*-manaregen/manaregen",
+    "value": 6
+  },
+  {
+    "dependsOn": [{ "modid": "rustboundmagic"}],
+    "file": "rustboundmagic:itemtypes/wearable/accessories/armorwaist-accessories.json",
+    "op": "replace",
+    "path": "/attributesByType/*/magicStatModifiersByType/*-tier3-*-manacost/genericmodifiermanacost",
+    "value": -0.18
+  },
+  {
+    "dependsOn": [{ "modid": "rustboundmagic"}],
+    "file": "rustboundmagic:itemtypes/wearable/accessories/armorwaist-accessories.json",
+    "op": "replace",
+    "path": "/attributesByType/*/magicStatModifiersByType/*-tier3-*-casttime/genericmodifiercasttime",
+    "value": -0.18
+  },
+  {
+    "dependsOn": [{ "modid": "rustboundmagic"}],
+    "file": "rustboundmagic:itemtypes/wearable/accessories/armorwaist-accessories.json",
+    "op": "replace",
+    "path": "/attributesByType/*/magicStatModifiersByType/*-tier3-*-duration/genericmodifierduration",
+    "value": 0.66
+  },
+  {
+    "dependsOn": [{ "modid": "rustboundmagic"}],
+    "file": "rustboundmagic:itemtypes/wearable/accessories/armorwaist-accessories.json",
+    "op": "replace",
+    "path": "/attributesByType/*/magicStatModifiersByType/*-tier3-*-damage/genericmodifierdamage",
+    "value": 0.16
+  },
+  {
+    "dependsOn": [{ "modid": "rustboundmagic"}],
+    "file": "rustboundmagic:itemtypes/wearable/accessories/armorwaist-accessories.json",
+    "op": "replace",
+    "path": "/attributesByType/*/magicStatModifiersByType/*-tier3-*-stats/genericmodifierstats",
+    "value": 0.16
+  },
+  {
+    "dependsOn": [{ "modid": "rustboundmagic"}],
+    "file": "rustboundmagic:itemtypes/wearable/accessories/armorwaist-accessories.json",
+    "op": "replace",
+    "path": "/attributesByType/*/magicStatModifiersByType/*-tier3-*-runspeed/walkspeedmodifier",
+    "value": 0.30
+  }
+]

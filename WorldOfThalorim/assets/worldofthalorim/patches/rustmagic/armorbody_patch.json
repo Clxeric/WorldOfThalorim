@@ -1,0 +1,100 @@
+[
+  {
+    "dependsOn": [{ "modid": "rustboundmagic"}],
+    "file": "rustboundmagic:itemtypes/wearable/mainarmor/armorbody.json",
+    "op": "replace",
+    "path": "/attributesByType/*-tier1/manacostforsoulbinding",
+    "value": 50
+  },
+  {
+    "dependsOn": [{ "modid": "rustboundmagic"}],
+    "file": "rustboundmagic:itemtypes/wearable/mainarmor/armorbody.json",
+    "op": "replace",
+    "path": "/attributesByType/*-tier1/magicStatModifiersByType/*/maxmana",
+    "value": 30
+  },
+  {
+    "dependsOn": [{ "modid": "rustboundmagic"}],
+    "file": "rustboundmagic:itemtypes/wearable/mainarmor/armorbody.json",
+    "op": "replace",
+    "path": "/attributesByType/*-tier1/magicStatModifiersByType/*/manaregen",
+    "value": 2
+  },
+  {
+    "dependsOn": [{ "modid": "rustboundmagic"}],
+    "file": "rustboundmagic:itemtypes/wearable/mainarmor/armorbody.json",
+    "op": "replace",
+    "path": "/attributesByType/*-tier1/magicStatModifiersByType/*/genericmodifiermanacost",
+    "value": -0.10
+  },
+  {
+    "dependsOn": [{ "modid": "rustboundmagic"}],
+    "file": "rustboundmagic:itemtypes/wearable/mainarmor/armorbody.json",
+    "op": "replace",
+    "path": "/attributesByType/*-tier2/manacostforsoulbinding",
+    "value": 200
+  },
+  {
+    "dependsOn": [{ "modid": "rustboundmagic"}],
+    "file": "rustboundmagic:itemtypes/wearable/mainarmor/armorbody.json",
+    "op": "replace",
+    "path": "/attributesByType/*-tier2/magicStatModifiersByType/*/maxmana",
+    "value": 150
+  },
+  {
+    "dependsOn": [{ "modid": "rustboundmagic"}],
+    "file": "rustboundmagic:itemtypes/wearable/mainarmor/armorbody.json",
+    "op": "replace",
+    "path": "/attributesByType/*-tier2/magicStatModifiersByType/*/manaregen",
+    "value": 4
+  },
+  {
+    "dependsOn": [{ "modid": "rustboundmagic"}],
+    "file": "rustboundmagic:itemtypes/wearable/mainarmor/armorbody.json",
+    "op": "replace",
+    "path": "/attributesByType/*-tier2/magicStatModifiersByType/*/genericmodifiermanacost",
+    "value": -0.20
+  },
+  {
+    "dependsOn": [{ "modid": "rustboundmagic"}],
+    "file": "rustboundmagic:itemtypes/wearable/mainarmor/armorbody.json",
+    "op": "replace",
+    "path": "/attributesByType/*-tier2/magicStatModifiersByType/*/genericmodifiercasttime",
+    "value": -0.10
+  },
+  {
+    "dependsOn": [{ "modid": "rustboundmagic"}],
+    "file": "rustboundmagic:itemtypes/wearable/mainarmor/armorbody.json",
+    "op": "replace",
+    "path": "/attributesByType/*-tier3/manacostforsoulbinding",
+    "value": 400
+  },
+  {
+     "dependsOn": [{ "modid": "rustboundmagic"}],
+    "file": "rustboundmagic:itemtypes/wearable/mainarmor/armorbody.json",
+    "op": "replace",
+    "path": "/attributesByType/*-tier3/magicStatModifiersByType/*/maxmana",
+    "value": 300
+  },
+  {
+    "dependsOn": [{ "modid": "rustboundmagic"}],
+    "file": "rustboundmagic:itemtypes/wearable/mainarmor/armorbody.json",
+    "op": "replace",
+    "path": "/attributesByType/*-tier3/magicStatModifiersByType/*/manaregen",
+    "value": 6
+  },
+  {
+    "dependsOn": [{ "modid": "rustboundmagic"}],
+    "file": "rustboundmagic:itemtypes/wearable/mainarmor/armorbody.json",
+    "op": "replace",
+    "path": "/attributesByType/*-tier3/magicStatModifiersByType/*/genericmodifiermanacost",
+    "value": -0.40
+  },
+  {
+    "dependsOn": [{ "modid": "rustboundmagic"}],
+    "file": "rustboundmagic:itemtypes/wearable/mainarmor/armorbody.json",
+    "op": "replace",
+    "path": "/attributesByType/*-tier3/magicStatModifiersByType/*/genericmodifiercasttime",
+    "value": -0.22
+  }
+]
