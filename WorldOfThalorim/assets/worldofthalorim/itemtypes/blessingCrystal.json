@@ -1,0 +1,63 @@
+{
+  "code": "blessingcrystal",
+  "class": "worldofthalorim.ItemClassBlessingCrysta",
+  "shape": { "base": "worldofthalorim:item/gem/blessingCrystal" },
+  "creativeinventory": {
+    "worldofthalorim": [ "*" ]
+  },
+  "heldTpIdleAnimation": "holdfirmgrip",
+  "guiTransform": {
+    "translation": {
+      "x": 0,
+      "y": 18,
+      "z": 22
+    },
+    "rotation": {
+      "x": 10,
+      "y": 78,
+      "z": 180
+    },
+    "origin": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "scale": 1.93
+  },
+  "tpHandTransform": {
+    "translation": {
+      "x": 0,
+      "y": -0.1,
+      "z": 0.23
+    },
+    "rotation": {
+      "x": -43,
+      "y": -174,
+      "z": 54
+    },
+    "origin": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "scale": 0.58
+  },
+  "groundTransform": {
+    "translation": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "rotation": {
+      "x": 90,
+      "y": 0,
+      "z": 83
+    },
+    "origin": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "scale": 3.15
+  }
+}

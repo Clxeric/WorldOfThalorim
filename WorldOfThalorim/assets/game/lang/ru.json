@@ -75,5 +75,9 @@
   "charattribute-bowsProficiency--0.25": "-25% скорость перезарядки луков",
   "charattribute-crossbowsProficiency--0.25": "-25% скорость перезарядки арбалетов",
   "charattribute-firearmsProficiency--0.25": "-25% скорость перезарядки огнестрела",
-  "charattribute-slingsProficiency--0.25": "-25% скорость перезарядки пращей"
+  "charattribute-slingsProficiency--0.25": "-25% скорость перезарядки пращей",
+
+  "worldofthalorim:RustyDustTrue": "TestTextTrue",
+  "worldofthalorim:RustyDustFalse": "TestTextFalse",
+  "worldofthalorim:BlessingCrystalDesc": "TestTextFalse"
 }

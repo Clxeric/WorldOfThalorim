@@ -13,6 +13,8 @@ namespace WorldOfThalorim
 
         public override void Start(ICoreAPI api)
         {
+            api.RegisterItemClass(Mod.Info.ModID + ".ItemClassBlessingCrysta", typeof(ItemClassBlessingCrystal));
+
             var harmony = new Harmony(Mod.Info.ModID);
             harmony.PatchAll(Assembly.GetExecutingAssembly());
         }

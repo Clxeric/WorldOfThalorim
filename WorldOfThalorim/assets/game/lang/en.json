@@ -75,5 +75,14 @@
   "charattribute-bowsProficiency--0.25": "-25% bows reload speed",
   "charattribute-crossbowsProficiency--0.25": "-25% crossbows reload speed",
   "charattribute-firearmsProficiency--0.25": "-25% firearms reload speed",
-  "charattribute-slingsProficiency--0.25": "-25% slings reload speed"
+  "charattribute-slingsProficiency--0.25": "-25% slings reload speed",
+
+  "tabname-worldofthalorim": "World Of Thalorim",
+
+  "worldofthalorim:item-blessingcrystal": "Blessing Crystal",
+  "worldofthalorim:RustyDustTrue": "TestTextTrue",
+  "worldofthalorim:RustyDustFalse": "TestTextFalse",
+  "worldofthalorim:BlessingCrystalTrue": "BlessingCrystalTrue",
+  "worldofthalorim:BlessingCrystalFalse": "BlessingCrystalFalse",
+  "worldofthalorim:BlessingCrystalDesc": "A crystal that removes the curse of the world (allows the user to open access to magic)"
 }

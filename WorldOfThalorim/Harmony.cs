@@ -1,10 +1,13 @@
 ﻿using HarmonyLib;
 using System;
 using System.Diagnostics;
+using System.Drawing;
 using System.Reflection;
 using Vintagestory.API.Common;
 using Vintagestory.API.Common.Entities;
+using Vintagestory.API.Config;
 using Vintagestory.API.Datastructures;
+using Vintagestory.API.Server;
 using Vintagestory.GameContent;
 
 
@@ -126,6 +129,40 @@ namespace WorldOfThalorim
 
             if (Math.Abs(wearableHealEffect) > float.Epsilon)
                 entity.Stats.Set("healingeffectivness", "wearablemod", wearableHealEffect, false);
+
+            return false;
+        }
+    }
+
+    [HarmonyPatch("rustboundmagic.src.common.item.resource.ItemRustyDustRM", "OnHeldInteractStop")]
+    public static class HarmonyItemRustyDustRM
+    {
+        [HarmonyPrefix]
+        public static bool Prefix_OnHeldInteractStop(object __instance, float secondsUsed, ItemSlot slot, EntityAgent byEntity, BlockSelection blockSel, EntitySelection entitySel)
+        {
+            if (byEntity == null)
+                return false;
+
+            if (!(byEntity is EntityPlayer entityPlayer))
+                return false;
+
+                int giftedMagic = entityPlayer.WatchedAttributes.GetInt("giftedMagic", 0);
+            if (giftedMagic == 1)
+            {
+                if (entityPlayer.World.Side == EnumAppSide.Server)
+                {
+                    IServerPlayer serverPlayer = entityPlayer.World.PlayerByUid(entityPlayer.PlayerUID) as IServerPlayer;
+                    serverPlayer.SendMessage(GlobalConstants.GeneralChatGroup, Lang.Get("worldofthalorim:RustyDustTrue", Array.Empty<object>()), EnumChatType.Notification, null);
+                }
+
+                return true;
+            }
+
+            if (entityPlayer.World.Side == EnumAppSide.Server)
+            {
+                IServerPlayer serverPlayer = entityPlayer.World.PlayerByUid(entityPlayer.PlayerUID) as IServerPlayer;
+                serverPlayer.SendMessage(GlobalConstants.GeneralChatGroup, Lang.Get("worldofthalorim:RustyDustFalse", Array.Empty<object>()), EnumChatType.Notification, null);
+            }
 
             return false;
         }
