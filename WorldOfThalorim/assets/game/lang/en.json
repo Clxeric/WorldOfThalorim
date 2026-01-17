@@ -80,9 +80,9 @@
   "tabname-worldofthalorim": "World Of Thalorim",
 
   "worldofthalorim:item-blessingcrystal": "Blessing Crystal",
-  "worldofthalorim:RustyDustTrue": "TestTextTrue",
-  "worldofthalorim:RustyDustFalse": "TestTextFalse",
-  "worldofthalorim:BlessingCrystalTrue": "BlessingCrystalTrue",
-  "worldofthalorim:BlessingCrystalFalse": "BlessingCrystalFalse",
-  "worldofthalorim:BlessingCrystalDesc": "A crystal that removes the curse of the world (allows the user to open access to magic)"
+  "worldofthalorim:RustyDustTrue": "The magical veil parts before you. New powers are now within your reach",
+  "worldofthalorim:RustyDustFalse": "A dark curse blankets the world's magic, blocking your path to greater power. Seek a Blessing Crystal to pierce this barrier",
+  "worldofthalorim:BlessingCrystalTrue": "The world's curse weakens. You feel its hold slipping as magical energies begin to flow",
+  "worldofthalorim:BlessingCrystalFalse": "The crystal's light fades, leaving you untouched. The curse still binds you",
+  "worldofthalorim:BlessingCrystalDesc": "A sacred crystal capable of breaking the world's ancient curse and awakening magical potential"
 }

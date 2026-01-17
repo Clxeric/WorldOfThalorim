@@ -1,12 +1,15 @@
 ﻿using HarmonyLib;
 using System.Diagnostics;
+using System.Numerics;
 using System.Reflection;
 using System.Text;
+using Vintagestory;
 using Vintagestory.API.Client;
 using Vintagestory.API.Common;
 using Vintagestory.API.Config;
 using Vintagestory.API.Server;
 using Vintagestory.GameContent;
+using Vintagestory.Server;
 
 namespace WorldOfThalorim
 {
@@ -14,15 +17,19 @@ namespace WorldOfThalorim
     {
         public override void OnHeldInteractStart(ItemSlot slot, EntityAgent byEntity, BlockSelection blockSel, EntitySelection entitySel, bool firstEvent, ref EnumHandHandling handling)
         {
-            if (byEntity == null || slot.Empty) return;
+            if (byEntity == null)
+            {
+                return;
+            }
+            
 
-            handling = EnumHandHandling.PreventDefault;
+            handling = EnumHandHandling.Handled;
             byEntity.AnimManager.StartAnimation("interactfirmgrip");
         }
 
         public override bool OnHeldInteractStep(float secondsUsed, ItemSlot slot, EntityAgent byEntity, BlockSelection blockSel, EntitySelection entitySel)
         {
-            if (byEntity == null || slot.Empty) return false; 
+            if (byEntity == null) return false; 
 
             if (secondsUsed < 1.5f) //досрочное завершение
             {
@@ -36,12 +43,12 @@ namespace WorldOfThalorim
         {
             byEntity.AnimManager.StopAnimation("interactfirmgrip");
 
-            if (byEntity == null || slot.Empty || secondsUsed < 1.5f) return;
+            if (byEntity == null) return;
 
             int giftedMagic = byEntity.WatchedAttributes.GetInt("giftedMagic", 0);
             if (giftedMagic == 0)
             {
-                byEntity.WatchedAttributes.SetInt("giftedMagic", 1);
+                byEntity.WatchedAttributes.SetInt("giftedMagic", 1);    
                 byEntity.World.PlaySoundAt(new AssetLocation("sounds/block/glass"), byEntity);
 
                 if (byEntity is EntityPlayer player)
@@ -50,6 +57,21 @@ namespace WorldOfThalorim
                     {
                         IServerPlayer serverPlayer = byEntity.World.PlayerByUid(player.PlayerUID) as IServerPlayer;
                         serverPlayer.SendMessage(GlobalConstants.GeneralChatGroup, Lang.Get("worldofthalorim:BlessingCrystalTrue"), EnumChatType.Notification, null);
+
+                        var modsystem = byEntity.Api.ModLoader.GetModSystem<WorldOfThalorimModSystem>();
+
+                        try
+                        {
+
+                            if (modsystem != null)
+                            {
+                                modsystem.SendTrySyncGiftedMagic(byEntity, 1, serverPlayer);
+                            }
+                        }
+                        catch (System.Exception e)
+                        {
+                            Debug.WriteLine($"[WorldOfThalorim] Error server send: {e.Message}");
+                        }
                     }
                 }
 
@@ -64,13 +86,36 @@ namespace WorldOfThalorim
                     {
                         IServerPlayer serverPlayer = byEntity.World.PlayerByUid(player.PlayerUID) as IServerPlayer;
                         serverPlayer.SendMessage(GlobalConstants.GeneralChatGroup, Lang.Get("worldofthalorim:BlessingCrystalFalse"), EnumChatType.Notification, null);
+
+                        var modsystem = byEntity.Api.ModLoader.GetModSystem<WorldOfThalorimModSystem>();
+                        try
+                        {
+
+                            if (modsystem != null)
+                            {
+                                modsystem.SendTrySyncGiftedMagic(byEntity, 1, serverPlayer);
+                            }
+                        }
+                        catch (System.Exception e)
+                        {
+                            Debug.WriteLine($"[WorldOfThalorim] Error server send: {e.Message}");
+                        }
                     }
                 }
+            }
+            if (byEntity.World.Side == EnumAppSide.Client)
+            {
+                Debug.WriteLine($"[WorldOfThalorim] Клиент OnHeldInteractStop {giftedMagic}");
+            }
+            if (byEntity.World.Side == EnumAppSide.Server)
+            {
+                Debug.WriteLine($"[WorldOfThalorim] Сервер OnHeldInteractStop {giftedMagic}");
             }
         }
         public override void GetHeldItemInfo(ItemSlot inSlot, StringBuilder dsc, IWorldAccessor world, bool withDebugInfo)
         {
             dsc.AppendLine(Lang.Get("worldofthalorim:BlessingCrystalDesc"));
+            base.GetHeldItemInfo(inSlot, dsc, world, withDebugInfo);
         }
     }
 }

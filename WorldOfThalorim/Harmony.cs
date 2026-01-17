@@ -141,30 +141,52 @@ namespace WorldOfThalorim
         public static bool Prefix_OnHeldInteractStop(object __instance, float secondsUsed, ItemSlot slot, EntityAgent byEntity, BlockSelection blockSel, EntitySelection entitySel)
         {
             if (byEntity == null)
-                return false;
-
-            if (!(byEntity is EntityPlayer entityPlayer))
-                return false;
-
-                int giftedMagic = entityPlayer.WatchedAttributes.GetInt("giftedMagic", 0);
-            if (giftedMagic == 1)
             {
+                Debug.WriteLine("[WorldOfThalorim] ошибка гармонии1 Prefix_OnHeldInteractStop");
+                return false;
+            }
+
+
+            if (byEntity is EntityPlayer entityPlayer)
+            {
+                int giftedMagic = entityPlayer.WatchedAttributes.GetInt("giftedMagic", 0);
+                if (giftedMagic == 1)
+                {
+                    if (entityPlayer.World.Side == EnumAppSide.Server)
+                    {
+                        IServerPlayer serverPlayer = entityPlayer.World.PlayerByUid(entityPlayer.PlayerUID) as IServerPlayer;
+                        serverPlayer.SendMessage(GlobalConstants.GeneralChatGroup, Lang.Get("worldofthalorim:RustyDustTrue", Array.Empty<object>()), EnumChatType.Notification, null);
+                    }
+
+                    return true;
+                }
+                else if (giftedMagic == 0)
+                {
+                    //пока пусть будет
+                }
+
                 if (entityPlayer.World.Side == EnumAppSide.Server)
                 {
                     IServerPlayer serverPlayer = entityPlayer.World.PlayerByUid(entityPlayer.PlayerUID) as IServerPlayer;
-                    serverPlayer.SendMessage(GlobalConstants.GeneralChatGroup, Lang.Get("worldofthalorim:RustyDustTrue", Array.Empty<object>()), EnumChatType.Notification, null);
+                    serverPlayer.SendMessage(GlobalConstants.GeneralChatGroup, Lang.Get("worldofthalorim:RustyDustFalse", Array.Empty<object>()), EnumChatType.Notification, null);
                 }
 
-                return true;
-            }
+                if (byEntity.World.Side == EnumAppSide.Client)
+                {
+                    Debug.WriteLine($"[WorldOfThalorim] Клиент Prefix_OnHeldInteractStop {giftedMagic}");
+                }
+                if (byEntity.World.Side == EnumAppSide.Server)
+                {
+                    Debug.WriteLine($"[WorldOfThalorim] Сервер Prefix_OnHeldInteractStop {giftedMagic}");
+                }
 
-            if (entityPlayer.World.Side == EnumAppSide.Server)
+                return false;
+            }
+            else
             {
-                IServerPlayer serverPlayer = entityPlayer.World.PlayerByUid(entityPlayer.PlayerUID) as IServerPlayer;
-                serverPlayer.SendMessage(GlobalConstants.GeneralChatGroup, Lang.Get("worldofthalorim:RustyDustFalse", Array.Empty<object>()), EnumChatType.Notification, null);
+                Debug.WriteLine("[WorldOfThalorim] ошибка гармонии1 Prefix_OnHeldInteractStop");
+                return false;
             }
-
-            return false;
         }
     }
 }

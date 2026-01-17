@@ -1,9 +1,19 @@
 {
   "code": "blessingcrystal",
   "class": "worldofthalorim.ItemClassBlessingCrysta",
-  "shape": { "base": "worldofthalorim:item/gem/blessingCrystal" },
+  "shape": {
+    "base": "item/gem/blessingCrystal"
+  },
   "creativeinventory": {
-    "worldofthalorim": [ "*" ]
+    "general": [
+      "*"
+    ],
+    "worldofthalorim": [
+      "*"
+    ]
+  },
+  "attributes": {
+
   },
   "heldTpIdleAnimation": "holdfirmgrip",
   "guiTransform": {
