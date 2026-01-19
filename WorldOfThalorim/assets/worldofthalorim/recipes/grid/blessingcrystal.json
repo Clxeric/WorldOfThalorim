@@ -1,0 +1,19 @@
+{
+	ingredientPattern: "CRE,SGS,IRA",
+	ingredients: {
+		"C": { type: "item", code: "rustboundmagic:attunementcore-advanced-conjuration" },
+		"I": { type: "item", code: "rustboundmagic:attunementcore-advanced-incantation" },
+		"A": { type: "item", code: "rustboundmagic:attunementcore-advanced-alteration" },
+		"E": { type: "item", code: "rustboundmagic:attunementcore-advanced-evocation" },
+		"R": { type: "item", code: "rustboundmagic:runicscroll-tier3" },
+		"S": { type: "item", code: "rustboundmagic:soulshard-normal" },
+		"G": { type: "item", code: "rustboundmagic:grimoireblank-normal" }
+	},
+	name: "anchor",
+	width: 3,
+	height: 3,
+	output: {
+		"type": "item",
+		"code": "worldofthalorim:blessingcrystal"
+	}
+}

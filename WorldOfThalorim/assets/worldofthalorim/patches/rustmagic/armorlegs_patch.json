@@ -46,7 +46,7 @@
     "file": "rustboundmagic:itemtypes/wearable/mainarmor/armorlegs.json",
     "op": "replace",
     "path": "/attributesByType/*-tier2/magicStatModifiersByType/*/genericmodifiermanacost",
-    "value": -0.16
+    "value": -0.12
   },
   {
     "dependsOn": [{ "modid": "rustboundmagic"}],
@@ -81,13 +81,13 @@
     "file": "rustboundmagic:itemtypes/wearable/mainarmor/armorlegs.json",
     "op": "replace",
     "path": "/attributesByType/*-tier3/magicStatModifiersByType/*/genericmodifiermanacost",
-    "value": -0.30
+    "value": -0.18
   },
   {
     "dependsOn": [{ "modid": "rustboundmagic"}],
     "file": "rustboundmagic:itemtypes/wearable/mainarmor/armorlegs.json",
     "op": "replace",
     "path": "/attributesByType/*-tier3/magicStatModifiersByType/*/genericmodifiercasttime",
-    "value": -0.16
+    "value": -0.18
   }
 ]

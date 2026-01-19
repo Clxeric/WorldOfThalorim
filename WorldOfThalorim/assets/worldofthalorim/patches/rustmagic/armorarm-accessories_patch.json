@@ -39,14 +39,14 @@
     "file": "rustboundmagic:itemtypes/wearable/accessories/armorarm-accessories.json",
     "op": "replace",
     "path": "/attributesByType/*/magicStatModifiersByType/*-tier1-*-manacost/genericmodifiermanacost",
-    "value": -0.04
+    "value": -0.02
   },
   {
     "dependsOn": [{ "modid": "rustboundmagic"}],
     "file": "rustboundmagic:itemtypes/wearable/accessories/armorarm-accessories.json",
     "op": "replace",
     "path": "/attributesByType/*/magicStatModifiersByType/*-tier1-*-casttime/genericmodifiercasttime",
-    "value": -0.04
+    "value": -0.02
   },
   {
     "dependsOn": [{ "modid": "rustboundmagic"}],
@@ -95,14 +95,14 @@
     "file": "rustboundmagic:itemtypes/wearable/accessories/armorarm-accessories.json",
     "op": "replace",
     "path": "/attributesByType/*/magicStatModifiersByType/*-tier2-*-manacost/genericmodifiermanacost",
-    "value": -0.10
+    "value": -0.04
   },
   {
     "dependsOn": [{ "modid": "rustboundmagic"}],
     "file": "rustboundmagic:itemtypes/wearable/accessories/armorarm-accessories.json",
     "op": "replace",
     "path": "/attributesByType/*/magicStatModifiersByType/*-tier2-*-casttime/genericmodifiercasttime",
-    "value": -0.10
+    "value": -0.04
   },
   {
     "dependsOn": [{ "modid": "rustboundmagic"}],
@@ -130,7 +130,7 @@
     "file": "rustboundmagic:itemtypes/wearable/accessories/armorarm-accessories.json",
     "op": "replace",
     "path": "/attributesByType/*/magicStatModifiersByType/*-tier2-*-runspeed/walkspeedmodifier",
-    "value": 0.20
+    "value": 0.15
   },
   {
     "dependsOn": [{ "modid": "rustboundmagic"}],
@@ -151,14 +151,14 @@
     "file": "rustboundmagic:itemtypes/wearable/accessories/armorarm-accessories.json",
     "op": "replace",
     "path": "/attributesByType/*/magicStatModifiersByType/*-tier3-*-manacost/genericmodifiermanacost",
-    "value": -0.16
+    "value": -0.06
   },
   {
     "dependsOn": [{ "modid": "rustboundmagic"}],
     "file": "rustboundmagic:itemtypes/wearable/accessories/armorarm-accessories.json",
     "op": "replace",
     "path": "/attributesByType/*/magicStatModifiersByType/*-tier3-*-casttime/genericmodifiercasttime",
-    "value": -0.16
+    "value": -0.08
   },
   {
     "dependsOn": [{ "modid": "rustboundmagic"}],
@@ -186,6 +186,6 @@
     "file": "rustboundmagic:itemtypes/wearable/accessories/armorarm-accessories.json",
     "op": "replace",
     "path": "/attributesByType/*/magicStatModifiersByType/*-tier3-*-runspeed/walkspeedmodifier",
-    "value": 0.30
+    "value": 0.20
   }
 ]
